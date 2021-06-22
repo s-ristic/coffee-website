@@ -1,0 +1,70 @@
+@use '../utils/' as *;
+
+h1 {
+  display: none;
+}
+
+h2 {
+  font-size: font-size(s);
+  text-transform: uppercase;
+  color: $dark-color;
+}
+
+.about h2 {
+  color: $brown-color;
+}
+
+.details h2 {
+  color: $light-color;
+  font-size: font-size(xl);
+  font-weight: font-weight(regular);
+  text-transform: capitalize;
+  margin: 3rem 0;
+  opacity: 0.7;
+}
+
+.mission {
+  h2 {
+    position: relative;
+    margin-bottom: 3rem;
+    z-index: 1;
+  }
+
+  p {
+    position: relative;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: font-size(xl);
+    z-index: 1;
+    line-height: 1.5;
+
+    @include mq(lg) {
+      font-size: font-size(xxl);
+      line-height: 2;
+    }
+  }
+}
+
+h3 {
+  color: $light-color;
+  font-size: font-size(xl);
+  font-weight: font-weight(regular);
+  margin: 3rem 0;
+  line-height: 1.5;
+}
+
+p {
+  color: $light-color;
+  font-size: font-size(s);
+  line-height: 2;
+}
+
+.header {
+  p {
+    writing-mode: vertical-lr;
+    text-transform: uppercase;
+  }
+
+  p:first-of-type {
+    transform: rotate(180deg);
+  }
+}

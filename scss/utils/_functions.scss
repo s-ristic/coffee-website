@@ -1,0 +1,10 @@
+@use 'sass:map';
+@use './variables' as *;
+
+@function font-weight($value) {
+  @return map.get($font-weights, $value);
+}
+
+@function font-size($value) {
+  @return map.get($font-sizes, $value);
+}

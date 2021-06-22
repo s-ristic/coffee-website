@@ -1,0 +1,82 @@
+@use '../utils' as *;
+
+.contact {
+  background: $brown-color url(../images/mission-bg.jpg);
+  background-blend-mode: multiply;
+
+  @include mq(lg) {
+    padding: 7rem 12rem;
+  }
+
+  &__content {
+    text-align: center;
+
+    h2 {
+      font-size: font-size(xxl);
+      text-transform: capitalize;
+      color: $light-color;
+    }
+
+    p {
+      margin: 5rem 0;
+    }
+  }
+
+  input {
+    border: none;
+    outline: none;
+    font-size: font-size(s);
+
+    &[type='email'] {
+      font-family: inherit;
+      display: block;
+      width: 100%;
+      max-width: 40rem;
+      height: 5rem;
+      padding: 0 2rem;
+      margin: 0 auto 2.5rem;
+      background: $dark-brown-color url(../images/mission-bg.jpg);
+      background-blend-mode: multiply;
+      color: $light-color;
+
+      @include mq(lg) {
+        display: inline-block;
+        margin: 0;
+      }
+
+      &::placeholder {
+        color: $light-color;
+        opacity: 0.5;
+      }
+    }
+
+    &[type='submit'] {
+      background: transparent;
+      border: 0.2rem solid;
+      color: $light-color;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+      padding: 0 3rem 0 3.2rem;
+      height: 5rem;
+      line-height: 5rem;
+      cursor: pointer;
+
+      @include mq(lg) {
+        margin-left: 2rem;
+      }
+    }
+  }
+
+  &__imageBox {
+    position: relative;
+    width: 25rem;
+    height: 20rem;
+    margin: 5rem auto 0;
+
+    @include mq(lg) {
+      width: 40rem;
+      height: 32rem;
+      margin: 7rem auto 0;
+    }
+  }
+}

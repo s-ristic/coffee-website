@@ -1,0 +1,44 @@
+@use '../utils' as *;
+
+.footer {
+  background: $brown-color url(../images/mission-bg.jpg);
+  background-blend-mode: multiply;
+  padding: 3rem;
+  @include flex(column);
+
+  @include mq(lg) {
+    flex-direction: row;
+    padding: 0 12rem 3rem;
+  }
+
+  &__socialMedia {
+    display: flex;
+    margin-bottom: 2.5rem;
+
+    @include mq(lg) {
+      margin-bottom: 0;
+    }
+
+    a {
+      font-size: font-size(l);
+      color: $dark-color;
+      margin-right: 1rem;
+    }
+  }
+
+  &__copyright {
+    flex: 1;
+
+    @include mq(lg) {
+      @include flex($justify-content: space-between);
+
+      margin-left: 3rem;
+    }
+
+    p {
+      color: $dark-color;
+      font-weight: font-weight(bold);
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@use '../utils/mixins' as *;
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 25rem;
+
+  @include mq(lg) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  &__imageBox {
+    position: relative;
+  }
+}

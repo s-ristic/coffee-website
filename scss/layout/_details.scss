@@ -1,0 +1,50 @@
+@use '../utils' as *;
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5rem 0;
+  padding-top: 11rem;
+  color: $light-color;
+  background: $dark-color;
+
+  @include pseudo($height: 8rem) {
+    background: url(../images/line.jpg) center/cover;
+  }
+
+  @include mq(lg) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 5rem;
+    padding: 18rem 10rem 10rem;
+  }
+
+  &__column {
+    text-align: center;
+  }
+
+  .icon {
+    i {
+      font-size: font-size(xxl);
+      opacity: 0.7;
+    }
+  }
+
+  ul {
+    li {
+      font-size: font-size(s);
+      margin: 2rem 0;
+
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+
+  a {
+    color: $light-color;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

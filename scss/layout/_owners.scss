@@ -1,0 +1,48 @@
+@use '../utils' as *;
+
+.owners {
+  background: $gray-color;
+  @include flex(column, space-between, center);
+
+  @include pseudo($top: initial, $left: initial, $width: 20rem, $height: 15rem) {
+    bottom: -5rem;
+    right: 0;
+    background: url(../images/coffee-spoon.png) center/cover;
+    z-index: 1;
+
+    @include mq(lg) {
+      width: 40rem;
+      height: 30rem;
+    }
+  }
+
+  @include mq(lg) {
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 7rem 12rem;
+  }
+
+  &__content {
+    width: 100%;
+
+    @include mq(lg) {
+      width: 50%;
+      margin-right: 6rem;
+    }
+  }
+
+  &__imageBox {
+    position: relative;
+    width: 26rem;
+    height: 26rem;
+    border: 0.7rem solid $brown-color;
+    border-top: 0;
+    margin-top: 5rem;
+
+    @include mq(lg) {
+      width: 40rem;
+      height: 40rem;
+      margin-top: 0;
+    }
+  }
+}
